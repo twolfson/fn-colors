@@ -1,4 +1,5 @@
-require('../lib/fn-colors.js');
+var fnColors = require('../lib/fn-colors.js'),
+    assert = require('assert');
 
 describe('A normal function', function () {
   before(function () {
@@ -10,7 +11,7 @@ describe('A normal function', function () {
   });
 
   it('has colors methods', function () {
-    assert(console.log.red);
+    assert(this.fn.red);
   });
 
   it('receives ANSI escaped strings', function () {
@@ -22,5 +23,13 @@ describe('A normal function', function () {
 describe('A pre-existing function', function () {
   it('has colors methods as well', function () {
     assert(console.log.blue);
+  });
+});
+
+// TODO: This requires further proxying on colors =/
+xdescribe('fn-colors', function () {
+  it('exports colors for custom manipulations', function () {
+    var colors = require('colors');
+    assert.strictEqual(fnColors, colors);
   });
 });
