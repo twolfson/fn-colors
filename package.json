@@ -31,5 +31,9 @@
   "devDependencies": {
     "grunt": "~0.3.17"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "mocha": "~1.11.0",
+    "colors": "~0.6.0-1"
+  }
 }

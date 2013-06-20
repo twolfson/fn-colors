@@ -1,34 +1,26 @@
-var fn_colors = require('../lib/fn-colors.js');
+require('../lib/fn-colors.js');
 
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
+describe('A normal function', function () {
+  before(function () {
+    // Create a function which saves arguments to this
+    var that = this;
+    this.fn = function saveArguments () {
+      that.args = arguments;
+    };
+  });
 
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
+  it('has colors methods', function () {
+    assert(console.log.red);
+  });
 
-exports['awesome'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(fn_colors.awesome(), 'awesome', 'should be awesome.');
-    test.done();
-  }
-};
+  it('receives ANSI escaped strings', function () {
+    this.fn.green('Hello World!');
+    console.log('TODO: Assert', this.args);
+  });
+});
+
+describe('A pre-existing function', function () {
+  it('has colors methods as well', function () {
+    assert(console.log.blue);
+  });
+});
