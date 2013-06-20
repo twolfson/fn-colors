@@ -1,7 +1,7 @@
 {
   "name": "fn-colors",
   "description": "Add colors methods to Function.prototype",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/twolfson/fn-colors",
   "author": {
     "name": "Todd Wolfson",
@@ -31,7 +31,11 @@
   "devDependencies": {
     "grunt": "~0.3.17"
   },
-  "keywords": [],
+  "keywords": [
+    "function",
+    "prototype",
+    "colors"
+  ],
   "dependencies": {
     "mocha": "~1.11.0",
     "colors": "~0.6.0-1"
