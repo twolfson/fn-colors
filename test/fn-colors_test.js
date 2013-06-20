@@ -16,7 +16,7 @@ describe('A normal function', function () {
 
   it('receives ANSI escaped strings', function () {
     this.fn.green('Hello World!');
-    console.log('TODO: Assert', this.args);
+    assert.strictEqual(this.args[0], '\x1B[32mHello World!\x1B[39m');
   });
 });
 
