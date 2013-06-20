@@ -1,0 +1,35 @@
+{
+  "name": "fn-colors",
+  "description": "Add colors methods to Function.prototype",
+  "version": "0.1.0",
+  "homepage": "https://github.com/twolfson/fn-colors",
+  "author": {
+    "name": "Todd Wolfson",
+    "email": "todd@twolfson.com",
+    "url": "http://twolfson.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twolfson/fn-colors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twolfson/fn-colors/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/twolfson/fn-colors/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/fn-colors",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "exit 0"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": []
+}
